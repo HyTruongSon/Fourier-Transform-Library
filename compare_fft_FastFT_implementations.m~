@@ -1,0 +1,22 @@
+% Software: Fast Fourier Transform (for real signals only)
+% Author: Hy Truong Son
+% Position: PhD Student
+% Institution: Department of Computer Science, The University of Chicago
+% Email: sonpascal93@gmail.com, hytruongson@uchicago.edu
+% Website: http://people.inf.elte.hu/hytruongson/
+% Copyright 2016 (c) Hy Truong Son. All rights reserved.
+
+function [] = compare_fft_FastFT_implementations()
+    %% Part 1:
+    fprintf('Part 1. Compare fft and FastFT 1D:');
+    N = 2 ^ 21;
+    fprintf('- Generating the signals: N = %d\n', N);
+    signal = rand([1 N]);
+    
+    fprintf('- fft_1d and ifft_1d');
+    [re1, im1] = fft_1d(signal);
+    [signal1] = ifft_1d(re1, im1);
+    fprintf('  Difference: %.6f\n', sum(abs(signal  
+    
+    %% Part 2:
+end
